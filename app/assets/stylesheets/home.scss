@@ -7,7 +7,7 @@ body {
   box-sizing: border-box;
 }
  .container {
-   background-color: gray;
+   
  }
  .container h1 {
    font-size: 50px;
@@ -36,14 +36,14 @@ body {
 
  .choices {
    margin-top: -6px;
-   background-color: black;
+   background-color: rgba(0,0,0,0.9);
    height: 70px;
    text-align: right;
  }
  .btn-wrapper{
    display: inline-block;
    margin-right: 20px;
-   .btn {
+   .btn1 {
       width: 120px;
       display: inline-block;
       background-color: black;
@@ -55,8 +55,8 @@ body {
       border-left: 1px solid white;
       margin-left: -5px;
       &:hover{
-        background-color: rgba(255,255,255,0.8);
-        transition: 2s;
+        background-color: rgba(255, 255, 255, 0.6);
+        transition: 1s;
       }
     }
 }
