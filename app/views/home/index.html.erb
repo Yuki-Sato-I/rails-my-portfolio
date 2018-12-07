@@ -1,0 +1,26 @@
+<div class=container>
+  <%= image_tag "background" %>
+  <h1 class="title">Welcome to Yuki's PortFolio</h1>
+  <div class="contents">
+    <div class="choices">
+      <div class="btn-wrapper">
+        <%= link_to "About", "#" ,class: "btn" %>
+        <%= link_to "Productions", "#" ,class: "btn" %>
+        <%= link_to "Blog", "#" ,class: "btn" %>
+        <%= link_to "Contact", "#" ,class: "btn" %>
+      </div>
+    </div>
+    <div class="myprof">
+      <div class="profile">
+        <%= image_tag "no_image.jpg" %>
+        <p>I'm a Japanese student.I study and study everyday.</p>
+      </div>
+      <div class="text">
+        <p>Hello World!!</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(".title").textillate();
+</script>
