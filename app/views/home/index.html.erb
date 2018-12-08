@@ -1,4 +1,4 @@
-<div class=container>
+<div class=containers>
   <%= image_tag "background.jpg" %>
   <h1 class="title">Welcome to Yuki's PortFolio</h1>
   <div class="contents">
@@ -22,5 +22,46 @@
   </div>
 </div>
 <script>
-  $(".title").textillate();
+$(function () {
+	$('.title').textillate({
+		// ループ
+		loop: true,
+		// 間隔時間
+		minDisplayTime: 8000,
+		// 遅延時間
+		initialDelay: 0,
+		// 自動スタート
+		autoStart: true,
+		// アニメーションの開始オプション
+		in: {
+			// エフェクト
+			effect: 'rollIn',
+			// 遅延時間の指数
+			delayScale: 1.5,
+			// 文字の遅延時間
+			delay: 200,
+			// アニメーションを同時実行
+			sync: false,
+			// アニメーションをランダム実行
+			shuffle: false,
+			// アニメーションをリバース実行
+			reverse: false
+		},
+		// アニメーションの終了オプション
+		out: {
+			// エフェクト
+			effect: 'rollOut',
+			// 遅延時間の指数
+			delayScale: 1.5,
+			// 文字の遅延時間
+			delay: 200,
+			// アニメーションを同時実行
+			sync: false,
+			// アニメーションをランダム実行
+			shuffle: false,
+			// アニメーションをリバース実行
+			reverse: false
+		}
+	});
+});
 </script>
