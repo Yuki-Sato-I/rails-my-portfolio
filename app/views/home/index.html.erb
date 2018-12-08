@@ -4,13 +4,13 @@
   <div class="contents">
     <div class="choices">
       <div class="btn-wrapper">
-        <%= link_to "About", "#" ,class: "btn1" %>
-        <%= link_to "Productions", "#" ,class: "btn1" %>
-        <%= link_to "Blog", "#" ,class: "btn1" %>
-        <%= link_to "Contact", "#" ,class: "btn1" %>
+        <div class="btn1 mybtn">About</div>
+        <div class="btn2 mybtn">Productions</div>
+        <div class="btn3 mybtn">Hobby</div>
+        <div class="btn4 mybtn">Contact</div>
       </div>
     </div>
-    <div class="myprof">
+    <div id="tabAbout" class="mytab">
       <div class="profile">
         <%= image_tag "no_image.jpg" %>
         <p>I'm a Japanese student.I study and study everyday.</p>
@@ -19,10 +19,44 @@
         <p>Hello World!!</p>
       </div>
     </div>
-  </div>
+    <div id="tabProductions" class="mytab">
+      <p>Productinos</p>
+    </div>
+    <div id="tabHobby" class="mytab">
+      <p>Hobby</p>
+    </div>
+    <div id="tabContact" class="mytab">
+      <p>Contact</p>
+    </div>
 </div>
 <script>
 $(function () {
+  $('.btn1').click(function(){
+    $('.mybtn').css("background-color","black");
+    $(this).css("background-color","rgba(255, 255, 255, 0.6)");
+    $('.mytab').removeClass('show');
+    $('#tabAbout').addClass('show');
+  });
+  $('.btn2').click(function(){
+    $('.mybtn').css("background-color","black");
+    $(this).css("background-color","rgba(255, 255, 255, 0.6)");
+    $('.mytab').removeClass('show');
+    $('#tabProductions').addClass('show');
+  });
+  $('.btn3').click(function(){
+    $('.mybtn').css("background-color","black");
+    $(this).css("background-color","rgba(255, 255, 255, 0.6)");
+    $('.mytab').removeClass('show');
+    $('#tabHobby').addClass('show');
+  });
+  $('.btn4').click(function(){
+    $('.mybtn').css("background-color","black");
+    $(this).css("background-color","rgba(255, 255, 255, 0.6)");
+    $('.mytab').removeClass('show');
+    $('#tabContact').addClass('show');
+  });
+
+
 	$('.title').textillate({
 		// ループ
 		loop: true,
