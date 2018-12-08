@@ -10,24 +10,10 @@
         <div class="btn4 mybtn">Contact</div>
       </div>
     </div>
-    <div id="tabAbout" class="mytab">
-      <div class="profile">
-        <%= image_tag "no_image.jpg" %>
-        <p>I'm a Japanese student.I study and study everyday.</p>
-      </div>
-      <div class="text">
-        <p>Hello World!!</p>
-      </div>
-    </div>
-    <div id="tabProductions" class="mytab">
-      <p>Productinos</p>
-    </div>
-    <div id="tabHobby" class="mytab">
-      <p>Hobby</p>
-    </div>
-    <div id="tabContact" class="mytab">
-      <p>Contact</p>
-    </div>
+    <%= render 'home/aboutpage' %>
+    <%= render 'home/productionspage' %>
+    <%= render 'home/hobbypage' %>
+    <%= render 'home/contactpage' %>
 </div>
 <script>
 $(function () {
