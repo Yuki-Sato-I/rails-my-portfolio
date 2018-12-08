@@ -80,9 +80,9 @@ body {
    border-right: 2px solid white; 
    height: 500px; /************************/
     img {
+      margin: 0 auto;
       width: 150px;
       height: 150px;
-      float: left;
       border-radius: 20px;
     }
  }
@@ -95,6 +95,14 @@ body {
    height: 500px; /************************/
    p {
      margin: 0;
+   }
+ }
+
+ ////////////////////////// productions //////////////////////////
+ #tabProductions {
+   img{
+     width: 150px;
+     height: 150px;
    }
  }
 
