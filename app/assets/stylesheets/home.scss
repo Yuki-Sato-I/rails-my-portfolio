@@ -106,3 +106,16 @@ body {
    }
  }
 
+ .my_production {
+   display: inline-block;
+   margin: 5px auto;
+   border-radius: 8px;
+   color: black;
+   background-color: white;
+   width: 80%;
+   border: 2px solid black;
+
+   .title-name{
+     font-size: 40px;
+   }
+ }

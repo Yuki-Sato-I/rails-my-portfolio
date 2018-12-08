@@ -1,11 +1,21 @@
 <div id="tabProductions" class="mytab">
   <h2>作品</h2>
-  <h3>TecBoard</h3>
-  <%= link_to "TecBoard", "https://tec-board-styk.herokuapp.com/" %>
-  <p>使用言語=> Ruby(on rails) HTML&CSS 2018/12/01</p>
-  <h3>LineBot:お天気チェック</h3>
-  <%= image_tag "no_image.jpg" %>
-  <p>使用言語=> Ruby(on rails) 2018/12/04</p>
-  <h3>ポートフォリオサイト着手 2018/12/8</h3>
-  <p>使用言語=> Ruby(on rails) HTML&CSS JavaScript </p>
+  <div class="my_production">
+    <h2 class="title-name">TecBoard</h2>
+    <p>リンク:<%= link_to "TecBoard", "https://tec-board-styk.herokuapp.com/" %></p>
+    <p>使用言語=> Ruby(on rails), HTML&CSS</p> 
+    <p>最終更新日:2018/12/01</p>
+  </div>
+  <div class="my_production">
+    <h2 class="title-name">LineBot:お天気チェック</h2>
+    <%= image_tag "no_image.jpg" %>
+    <p>使用言語=> Ruby(on rails)</p>
+    <p>最終更新日:2018/12/04</p>
+  </div>
+  <div class="my_production">
+    <h2 class="title-name">ポートフォリオサイト</h2>
+    <p>リンク:<%= link_to "Yuki's PortFolio", "https://my-portfolio-styk.herokuapp.com/" %></p>
+    <p>使用言語=> Ruby(on rails), HTML&CSS, JavaScript </p>
+    <p>最終更新日:2018/12/08</p>
+  </div>
 </div>

@@ -1,0 +1,12 @@
+<%= form_for(@production,url: '/new/new/new/styk/hello/way') do |f| %>
+  <%= f.label :name , "タイトル"%>
+  <%= f.text_field :name %>
+    
+  <%= f.label :content , "内容"%>
+  <%= f.text_area :content ,:size => "200x50" %>
+       
+  <%= f.label :complete_date ,"完成日" %>
+  <%= f.text_area :complete_date %>
+
+  <%= f.submit "送信", class: "btnas btn-primary" %>
+<% end %>
