@@ -59,7 +59,7 @@ body {
         transition: 0.5s !important;
       }
     }
-}
+ }
   .mytab {
     width: 100%;
   }
@@ -91,6 +91,7 @@ body {
  .text{
    display: inline-block;
    width: 60%;
+   vertical-align: top;
    margin: 0;
    height: 500px; /************************/
    p {
