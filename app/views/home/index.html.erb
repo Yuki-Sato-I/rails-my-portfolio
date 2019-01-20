@@ -1,47 +1,54 @@
 <div class=containers>
   <%= image_tag "background.jpg" %>
-  <h1 class="title">Welcome to My PortFolio</h1>
+  <h1 class="title">Welcome to Yuki's PortFolio</h1>
   <div class="contents">
     <div class="choices">
       <div class="btn-wrapper">
-        <div class="btn1 mybtn">About</div>
+        <div class="btn1 mybtn chosen-btn">About</div>
         <div class="btn2 mybtn">Productions</div>
         <div class="btn3 mybtn">Hobby</div>
-        <div class="btn4 mybtn">Contact</div>
+				<div class="btn4 mybtn">Blog</div>
+        <div class="btn5 mybtn">Contact</div>
       </div>
     </div>
     <%= render 'home/aboutpage' %>
     <%= render 'home/productionspage' %>
     <%= render 'home/hobbypage' %>
+		<%= render 'home/blogpage' %>
     <%= render 'home/contactpage' %>
 </div>
 <script>
 $(function () {
   $('.btn1').click(function(){
-    $('.mybtn').css("background-color","black");
-    $(this).css("background-color","rgba(255, 255, 255, 0.6)");
+	  $('.mybtn').removeClass('chosen-btn');
+		$(this).addClass('chosen-btn');
     $('.mytab').removeClass('show');
     $('#tabAbout').addClass('show');
   });
   $('.btn2').click(function(){
-    $('.mybtn').css("background-color","black");
-    $(this).css("background-color","rgba(255, 255, 255, 0.6)");
+		$('.mybtn').removeClass('chosen-btn');
+		$(this).addClass('chosen-btn');
     $('.mytab').removeClass('show');
     $('#tabProductions').addClass('show');
   });
   $('.btn3').click(function(){
-    $('.mybtn').css("background-color","black");
-    $(this).css("background-color","rgba(255, 255, 255, 0.6)");
+		$('.mybtn').removeClass('chosen-btn');
+		$(this).addClass('chosen-btn');
     $('.mytab').removeClass('show');
     $('#tabHobby').addClass('show');
   });
   $('.btn4').click(function(){
-    $('.mybtn').css("background-color","black");
-    $(this).css("background-color","rgba(255, 255, 255, 0.6)");
+	  $('.mybtn').removeClass('chosen-btn');
+		$(this).addClass('chosen-btn');
     $('.mytab').removeClass('show');
     $('#tabContact').addClass('show');
   });
-
+  $('.btn5').click(function(){
+	  $('.mybtn').removeClass('chosen-btn');
+		$(this).addClass('chosen-btn');
+    $('.mytab').removeClass('show');
+    $('#tabContact').addClass('show');
+  });
 
 	$('.title').textillate({
 		// ループ

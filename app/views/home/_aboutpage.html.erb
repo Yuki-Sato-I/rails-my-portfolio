@@ -4,10 +4,27 @@
     <%= image_tag "no_image.jpg" %>
     <p>現在地方の大学二年生です。独学で様々なプログラミング言語を学び始めました。
       少しでも学んだことを使ってみたいので何かしらに使おうとしています。
-      unityのさわりを少しやったら普通に面白かったのでunityを触ってみようかなと思ってます。</p>
+      unityのさわりを少しやったら普通に面白かったのでunityを触ってみようかなと思ってます。現在は大学の
+      学内カンパニーに参加させてもらい、日々経験を積ませていただいています。</p>
   </div>
   <div class="text">
     <br>
-    <p>Hello World!!</p><p>まだ全体的に準備中です。</p>
+    <h1>Skill一覧</h1>
+      <% @skils.each do |skill| %>
+        <span class="skill">
+          <%= link_to "#{skill.name}", "#" %>
+          <div style="display:none;">status:<% unless skill.productions.present? %>学習中<% else %>作品あり<% end %></div>
+        </span>
+      <% end %>
   </div>
 </div>
+<script>
+$(function(){
+  $('.skill').hover(function(){
+    $(this).find('div').show();
+  },
+  function(){
+    $(this).find('div').hide();
+  });
+});
+</script>

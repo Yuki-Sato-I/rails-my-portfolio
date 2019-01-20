@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  devise_for :users
   ############################## home ########################################
-  get '/', to:'home#index'
+  root 'home#index'
   #get '/new/new/new/styk/hello/way', to:'home#new'
   #post '/new/new/new/styk/hello/way', to:'home#create'
   #get '/new/new/new/styk/hello/way/edit/:id', to:'home#edit'

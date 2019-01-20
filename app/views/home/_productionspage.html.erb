@@ -1,8 +1,30 @@
 <div id="tabProductions" class="mytab">
-  <h2>作品</h2>
+  <h2>作品(<%= @productions.count %> productions)</h2>
+  <ul>
+    <% @productions.each do |production| %>
+      <li class="my_production">
+        <p class="title-name"><%= production.name %></p>
+        <h4>[内容]</h4>
+        <div class="my-content">
+          <p><%= simple_format(production.content) %></p>
+        </div>
+        <div>リンク:<%= link_to "#{production.name}", "#{production.link}" %></div>
+        <div>使用スキル:
+          <% production.languages.each do |language| %>
+            <%= link_to "#{language.name}", "#" %>
+          <% end %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+
+
+<!--
   <div class="my_production">
-    <h2 class="title-name">TecBoard</h2>
-    <p>リンク:<%= link_to "TecBoard", "https://tec-board-styk.herokuapp.com/" %></p>
+    <h2 class="title-name"><%= @productions.name %></h2>
+    <p>リンク:<%= link_to "#{@productions.name}", "https://tec-board-styk.herokuapp.com/" %></p>
     <p>使用言語=> Ruby(on rails), HTML&CSS</p> 
     <p>最終更新日:2018/12/01</p>
   </div>
@@ -25,3 +47,4 @@
     <p>最終更新日:2018/12/24</p>
   </div>
 </div>
+-->
