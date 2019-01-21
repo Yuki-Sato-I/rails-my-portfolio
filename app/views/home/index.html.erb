@@ -9,8 +9,18 @@
         <div class="btn3 mybtn">Hobby</div>
 				<div class="btn4 mybtn">Blog</div>
         <div class="btn5 mybtn">Contact</div>
+				<span class="fa fa-list fa-3x"></span>
+				<div class="toggle-lists">
+					<p class="btn1 btn">About</p>
+					<p class="btn2 btn">Productions</p>
+					<p class="btn3 btn">Hobby</p>
+					<p class="btn4 btn">Blog</p>
+					<p class="btn5 btn">Contact</p>
+				</div>
       </div>
+
     </div>
+
     <%= render 'home/aboutpage' %>
     <%= render 'home/productionspage' %>
     <%= render 'home/hobbypage' %>
@@ -19,6 +29,10 @@
 </div>
 <script>
 $(function () {
+
+  $(".fa-list").click(function(){
+		$('.toggle-lists').slideToggle();
+	});
   $('.btn1').click(function(){
 	  $('.mybtn').removeClass('chosen-btn');
 		$(this).addClass('chosen-btn');

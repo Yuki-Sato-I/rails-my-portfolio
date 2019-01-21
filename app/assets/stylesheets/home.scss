@@ -45,10 +45,9 @@ body {
  .btn-wrapper{
    display: inline-block;
    margin-right: 20px;
-   .btn1, .btn2, .btn3, .btn4, .btn5{
+   .mybtn{
       width: 120px;
       display: inline-block;
-      //background-color: black;
       line-height: 70px;
       text-align: center;
       color: white;
@@ -125,6 +124,11 @@ body {
      }
    }
  }
+ @media(min-width: 741px){
+   .fa-list, .toggle-lists{
+     display: none !important;
+   }
+  }
 
  @media(max-width: 740px){
    .profile, .text{
@@ -134,9 +138,32 @@ body {
      border: none;
      border-bottom: 2px solid white;  
    }
-   /*.btn-wrapper{
-     display: none;
-   }*/
+   .mybtn{
+    display: none !important;
+    }
+    .fa-list{
+      display: inline-block !important;
+      margin-top: 12px;
+      width: 70px;
+      height: 57px;
+    }
+    .toggle-lists{
+      display: none;
+      border-top: 1px solid lightgray;
+      font-size: 20px;
+      width: 150px;
+      background-color: black;
+      position: relative;
+      z-index: 999;
+      p{
+        display: block;
+        position: relative;
+        z-index: 10000;
+      }
+      .btn{
+        border-radius: 0px !important;
+      }
+    }
  }
 
  ////////////////////////// productions //////////////////////////
@@ -174,4 +201,10 @@ body {
    width: 95%;
    margin: 0 auto;
    text-align: center;
+ }
+ @media(max-width: 740px){
+  .my_production{
+    width: 98%;
+    margin: 2px auto;
+  }
  }
