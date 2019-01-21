@@ -1,0 +1,20 @@
+<div class="productions">
+  <h1 class="lang-title"><%= @language.name %>を使用した作品</h1>
+  <ul>
+    <% @language.productions.each do |production| %>
+      <li class="my_production">
+        <p class="title-name"><%= production.name %></p>
+        <h4>[内容]</h4>
+        <div class="my-content">
+          <p><%= simple_format(production.content) %></p>
+        </div>
+        <div>リンク:<%= link_to "#{production.name}", "#{production.link}" %></div>
+        <div>使用スキル:
+          <% production.languages.each do |language| %>
+            <%= link_to "#{language.name}", "/language/#{language.id}" %>
+          <% end %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>

@@ -2,7 +2,7 @@
   <div class="profile">
     <br>
     <%= image_tag "no_image.jpg" %>
-    <p>現在地方の大学二年生です。独学で様々なプログラミング言語を学び始めました。
+    <p>  現在地方の大学二年生です。独学で様々なプログラミング言語を学び始めました。
       少しでも学んだことを使ってみたいので何かしらに使おうとしています。
       unityのさわりを少しやったら普通に面白かったのでunityを触ってみようかなと思ってます。現在は大学の
       学内カンパニーに参加させてもらい、日々経験を積んでいる最中です。</p>
@@ -12,7 +12,7 @@
     <h1>Skill一覧</h1>
       <% @skils.each do |skill| %>
         <span class="skill">
-          <%= link_to "#{skill.name}", "#" %>
+          <%= link_to "#{skill.name}", "/language/#{skill.id}" %>
           <div style="display:none;">status:<% unless skill.productions.present? %>学習中<% else %>作品あり<% end %></div>
         </span>
       <% end %>

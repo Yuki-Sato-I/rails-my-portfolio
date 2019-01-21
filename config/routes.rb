@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   ############################## home ########################################
   root 'home#index'
+  get '/language/:id', to:'home#show', as: :language_show
   #get '/new/new/new/styk/hello/way', to:'home#new'
   #post '/new/new/new/styk/hello/way', to:'home#create'
   #get '/new/new/new/styk/hello/way/edit/:id', to:'home#edit'
