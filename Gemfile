@@ -27,7 +27,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'cancancan'
 gem 'devise'
 gem 'rails_admin'
-###############3
+###############
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
