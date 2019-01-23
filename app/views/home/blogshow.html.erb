@@ -1,0 +1,7 @@
+<div class="blog-container">  
+  <h2><%= @blog.title %></h2>
+  <div class="blog-contents">
+    <p><%= simple_format(@blog.content) %></p>
+  </div>
+  <p class="blog-created"><%= @blog.created_at.strftime("%Y-%m-%d %H:%M") %></p>
+</div>

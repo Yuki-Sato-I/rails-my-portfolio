@@ -9,4 +9,7 @@ class HomeController < ApplicationController
     @language = Language.find(params[:id])
   end
 
+  def blogshow
+    @blog = Blog.find(params[:id])
+  end
 end
