@@ -87,9 +87,11 @@ body {
    }
    a {
      color: white;
+     display: inline-block;
    }
    .fa:hover{
     text-decoration: none;
+    color: white;
    }
  }
 
@@ -270,3 +272,24 @@ body {
    }
  }
  
+/**************** contact form **************************/
+ .contact-form{
+   width: 400px;
+   margin: 0 auto;
+   .form{
+     display: block;
+     height: 30px;
+     width: 90%;
+     margin: 0 auto;
+     background-color: lightgray;
+     border-radius: 5px;
+   }
+   .form-btn{
+     background-color: white;
+     margin-top: 6px;
+   }
+   .form-content{
+     height: 200px;
+     overflow: scroll;
+   }
+ }
