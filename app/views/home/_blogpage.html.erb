@@ -1,3 +1,15 @@
 <div id="tabBlog" class="mytab">
-  <h2>準備中....</h2>
+  <h2>Blogs(<%= @blogs.count %> blogs)</h2>
+  <div class="productions">
+    <% @blogs.each do |blog| %>
+      <div class="blog">
+        <div class="blog-contents">
+          <p>Title:</p>
+          <p class="title-name"><%= blog.title %></p>
+        </div>
+        <p class="blog-created">作成日:<%= blog.created_at.strftime("%Y-%m-%d %H:%M") %></p>
+        
+      </div>
+    <% end %>
+  </div>
 </div>

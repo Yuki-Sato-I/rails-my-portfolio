@@ -1,7 +1,8 @@
 class HomeController < ApplicationController
   def index
-    @productions = Production.all
+    @productions = Production.all.order(created_at: :desc)
     @skils = Language.all
+    @blogs = Blog.all.order(created_at: :desc)
   end
 
   def show
