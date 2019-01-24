@@ -190,12 +190,18 @@ body {
    display: inline-block;
    margin: 10px 0;
    width: 400px;
-   height: 475px;
+   height: 500px;
    border-radius: 8px;
    color: black;
    background-color: white;
    vertical-align: top;
+   position: relative;
+   .update{
+    position: absolute;
+      bottom: 0px;
+      right: 0;
    }
+  }
 
    .title-name{
      font-size: 40px;
