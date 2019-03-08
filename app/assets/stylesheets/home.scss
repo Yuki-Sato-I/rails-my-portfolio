@@ -263,14 +263,15 @@ body {
 
  /*********************** blogshow  **********************/
  .blog-container{
-   width: 95%;
-   margin: 0 auto;
+   width: 600px;
+   margin: 100px auto;
+   margin-top: 50px;
    background-color: white;
    border-radius: 7px;
    color: black;
    position: relative;
    .blog-contents{
-     width: 95%;
+     width: 500px;
      margin: 0 auto;
    }
    h2{
