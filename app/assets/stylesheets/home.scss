@@ -218,7 +218,7 @@ body {
  //}
 
   .blog{
-    height: 100px;
+    height: 120px;
     width: 90%;
     margin: 5px auto;
     background-color: white;
@@ -242,8 +242,20 @@ body {
   font-size: 15px;
   color: lightgray;
   position: absolute;
-  bottom: 0px;
-  right: 10px;
+    bottom: 0;
+    right: 5px;
+ }
+ .btn-detail {
+   text-align: center;
+   a{
+     display: inline-block;
+     margin: 0 5px;
+     height: 50px;
+     width: 95%;
+     line-height: 50px;
+     background-color: white;
+     border-radius: 7px;
+   }
  }
  @media(max-width: 740px){
   .my_production{
@@ -264,14 +276,14 @@ body {
  /*********************** blogshow  **********************/
  .blog-container{
    width: 600px;
-   margin: 100px auto;
-   margin-top: 50px;
-   background-color: white;
-   border-radius: 7px;
+   margin: 50px auto;
+   margin-bottom: 20px;
    color: black;
-   position: relative;
    .blog-contents{
-     width: 500px;
+     border-radius: 7px;
+     position: relative;
+     background-color: white;
+     width: 95%;
      margin: 20px auto;
    }
    h2{
@@ -285,8 +297,8 @@ body {
      width: 90%;
      margin: 0 auto;
      .blog-contents{
-       width: 95%;
        margin: 0 auto;
+       margin-bottom: 20px;
      }
    }
  }
