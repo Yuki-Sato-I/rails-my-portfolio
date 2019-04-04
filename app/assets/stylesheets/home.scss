@@ -1,6 +1,19 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.btn-detail {
+  text-align: center;
+  a{
+    display: inline-block;
+    margin: 0 5px;
+    height: 50px;
+    width: 95%;
+    line-height: 50px;
+    background-color: white;
+    border-radius: 7px;
+  }
+}
+
 //////////////////////////////  index  ///////////////////////////////////
 body {
   margin: 0;
@@ -237,6 +250,11 @@ body {
    a:hover{
      text-decoration: none;
    }
+   .lang-btn {
+    a {
+      width: 400px;
+    }
+   }
  }
  .blog-created{
   font-size: 15px;
@@ -245,22 +263,16 @@ body {
     bottom: 0;
     right: 5px;
  }
- .btn-detail {
-   text-align: center;
-   a{
-     display: inline-block;
-     margin: 0 5px;
-     height: 50px;
-     width: 95%;
-     line-height: 50px;
-     background-color: white;
-     border-radius: 7px;
-   }
- }
+
  @media(max-width: 740px){
   .my_production{
     width: 98%;
     margin: 2px auto;
+  }
+  .lang-btn {
+    a {
+      width: 98% !important;
+    }
   }
   .blog-contents{
     position: relative;
