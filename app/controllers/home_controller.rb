@@ -17,6 +17,7 @@ class HomeController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
+      #flash[:sucess] = '送信に成功しました.'
       redirect_to root_url
     else
       @productions = Production.all.order(created_at: :desc)
@@ -28,6 +29,6 @@ class HomeController < ApplicationController
 
 private
   def contact_params
-    params.require(:contact).permit(:name,:content,:email)
+    params.require(:contact).permit(:name, :content, :email)
   end
 end
