@@ -4,11 +4,12 @@
     <title>RailsMyPortfolio</title>
     <%= favicon_link_tag('favicon.ico') %>
     <%= render 'layouts/rails_default' %>
-    <%= render 'layouts/shim' %> <!-- IE ver.9未満のため -->
+    <%= render 'layouts/shim' %>
   </head>
 
   <body>
     <%= yield %>
+    <%= render 'layouts/flashAlert' %>
     <%= render 'layouts/footer' %>
   </body>
 

@@ -17,12 +17,13 @@ class HomeController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
-      #flash[:sucess] = '送信に成功しました.'
+      flash[:detail] = '送信に成功しました.'
       redirect_to root_url
     else
       @productions = Production.all.order(created_at: :desc)
       @skils = Language.all
       @blogs = Blog.all.order(created_at: :desc)
+      flash[:detail] = '入力に誤りがあります'
       render 'index'
     end
   end
