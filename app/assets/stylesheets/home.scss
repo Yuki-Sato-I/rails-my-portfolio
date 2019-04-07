@@ -145,8 +145,10 @@ footer {
   }
 }
 
-.fa-list, .toggle-lists {
-  display: none !important;
+@media(min-width: 741px){
+  .fa-list, .toggle-lists{
+   display: none !important;
+  }
 }
 
 @media(max-width: 740px){
