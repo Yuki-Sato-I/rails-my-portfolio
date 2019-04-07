@@ -8,7 +8,7 @@
         <div class="my-content">
           <p><%= simple_format(production.content) %></p>
         </div>
-        <div>リンク:<%= link_to "#{production.name}", "#{production.link}" %></div>
+        <div>リンク:<%= link_to "#{production.name}", "#{production.link}", data: {"turbolinks" => false} %></div>
         <div>使用スキル:
           <% production.languages.each do |language| %>
             <%= link_to "#{language.name}", "/language/#{language.id}" %>

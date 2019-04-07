@@ -2,7 +2,7 @@
   <h2>Blogs(<%= @blogs.count %> blogs)</h2>
   <div class="productions">
     <% @blogs.each do |blog| %>
-      <%= link_to "/blog/#{blog.id}" do %>
+      <%= link_to "/blog/#{blog.id}", data: {"turbolinks" => false} do %>
         <div class="blog">
           <div class="blog-contents">
             <p>Title:</p>

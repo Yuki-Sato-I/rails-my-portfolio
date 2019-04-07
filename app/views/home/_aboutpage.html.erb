@@ -14,7 +14,7 @@
     <h1>Skill一覧</h1>
       <% @skils.each do |skill| %>
         <span class="skill">
-          <%= link_to "#{skill.name}", "/language/#{skill.id}" %>
+          <%= link_to "#{skill.name}", "/language/#{skill.id}", data: {"turbolinks" => false} %>
           <div style="display:none;">status:<% unless skill.productions.present? %>学習中<% else %>作品あり<% end %></div>
         </span>
       <% end %>
