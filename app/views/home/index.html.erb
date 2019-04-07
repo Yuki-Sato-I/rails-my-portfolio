@@ -1,6 +1,6 @@
 <div class=containers>
   <%= image_tag "background.jpg" %>
-  <h1 class="title">Welcome to Yuki's PortFolio</h1>
+  <h1 id="title"></h1><!--Welcome to Yuki's PortFolio</h1>-->
   <div class="contents">
     <div class="choices">
       <div class="btn-wrapper">
@@ -26,9 +26,27 @@
     <%= render 'home/contactpage' %>
   </div>
 </div>
+<div class="skill_animation">
+</div>
+<script text="type/javascript">
+
+var i = 0;
+var str = 'Welcome to Yuki\'s PortFolio.';
+
+function oneChar(){
+  document.getElementById('title').innerText = str.substring(0,i++);
+  document.getElementById('title').innerHTML += '<span>|</span>';
+  if(i <= str.length){
+    setTimeout('oneChar();', 150);
+  }
+  console.log(i);
+}
+
+oneChar();
+
+</script>
 <script>
 $(function () {
-
   $(".fa-list").click(function(){
 		$('.toggle-lists').slideToggle();
 	});
@@ -62,30 +80,5 @@ $(function () {
     $('.mytab').removeClass('show');
     $('#tabContact').addClass('show');
   });
-
-	$('.title').textillate({
-		loop: true,
-		minDisplayTime: 8000,
-		initialDelay: 0,
-		autoStart: true,
-		// アニメーションの開始オプション
-		in: {
-			effect: 'rollIn',
-			delayScale: 1.5,
-			delay: 200,
-			sync: false,
-			shuffle: false,
-			reverse: false
-		},
-		// アニメーションの終了オプション
-		out: {
-			effect: 'rollOut',
-			delayScale: 1.5,
-			delay: 200,
-			sync: false,
-			shuffle: false,
-			reverse: false
-		}
-	});
 });
 </script>
