@@ -1,6 +1,6 @@
 <div class=containers>
   <%= image_tag "background.jpg" %>
-  <h1 id="title"></h1><!--Welcome to Yuki's PortFolio</h1>-->
+  <h1 id="title"></h1>
   <div class="contents">
     <div class="choices">
       <div class="btn-wrapper">
@@ -29,20 +29,34 @@
 <div class="skill_animation">
 </div>
 <script text="type/javascript">
-
 var i = 0;
 var str = 'Welcome to Yuki\'s PortFolio.';
-
+var titleText = document.getElementById('title');
+oneChar();
 function oneChar(){
-  document.getElementById('title').innerText = str.substring(0,i++);
-  document.getElementById('title').innerHTML += '<span>|</span>';
+  var random = Math.floor(Math.random() * 151) + 100;
+  titleText.innerText = str.substring(0,i++);
+  titleText.innerHTML += '<span id=pointer>|</span>';
   if(i <= str.length){
-    setTimeout('oneChar();', 150);
+    setTimeout('oneChar();', random);
+  }else{
+    setTimeout('deleteChar();', 5000);
   }
-  console.log(i);
 }
 
-oneChar();
+function deleteChar(){
+  var random = Math.floor(Math.random() * 81) + 30;
+  titleText.innerText = str.substring(0,i--);
+  titleText.innerHTML += '<span id=pointer>|</span>';
+  if(i >= 0){
+    setTimeout('deleteChar();', random);
+  }else{
+    setTimeout('oneChar();', 2000);
+  }
+}
+setInterval(function(){
+  document.getElementById('pointer').style.opacity ^= 1;
+}, 500);
 
 </script>
 <script>
