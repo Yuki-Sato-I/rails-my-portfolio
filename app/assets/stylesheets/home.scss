@@ -217,7 +217,7 @@ ul {
   border: 2px solid gray;
   text-align: left;
 }
-
+/*
 .blog {
   height: 120px;
   width: 90%;
@@ -231,7 +231,7 @@ ul {
     margin-left: 10px; 
   }
 }
-
+*/
 .productions {
   width: 95%;
   margin: 0 auto;
@@ -246,7 +246,7 @@ ul {
   }
 }
 
-.blog-created{
+.blog-created {
   font-size: 15px;
   color: lightgray;
   position: absolute;
@@ -266,9 +266,6 @@ ul {
   }
   .blog-contents {
     position: relative;
-    .title-name {
-      font-size: 15px;
-    }
   }
   .blog-created {
     font-size: 10px;
